@@ -1,4 +1,11 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT 
 pragma solidity 0.8.10;
 
-contract Contract {}
+contract Faucet {
+
+    receive () external payable {}
+
+    function drip () public {
+        msg.sender.transfer(1000);
+    }
+}

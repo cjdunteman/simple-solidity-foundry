@@ -17,9 +17,9 @@ contract PiggyBankTest is DSTest {
         piggy = new PiggyBank();
     }
 
-    function testPlainTransfer () public {
-        payable(address(piggy)).transfer(100);
-        assertEq(address(piggy).balance, 100);
+    function testPlainTransfer (uint96 amount) public {
+        payable(address(piggy)).transfer(amount);
+        assertEq(address(piggy).balance, amount);
     }
 
     function testWithdrawAsOwner () public {
