@@ -10,5 +10,5 @@ contract Faucet {
         require((address(this)).balance >= amount, "the faucet does not have enough");
 
         payable(address(msg.sender)).transfer(amount);
-    }
+   }
 }
